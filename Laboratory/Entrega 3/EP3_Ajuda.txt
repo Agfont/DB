@@ -1,0 +1,15 @@
+BD - ET3 -> Mudar Do instead Nothing
+1a) /*Restrições de integridade*/
+b) /*NOT NULL, FK*/
+c)
+d) 
+f)/*Usar DE, verificar se está vigente*/
+g)
+h) CREATE TRIGGER checabaixas AFTER INSERT or UPDATE or DELETE on Divisao
+FOR EACH ROW EXECUTE PROCEDURE checabaixas(
+CREATE TRIGGER numbaixasupdate INSERT or UPDATE on Grupo_Armado
+FOR EACH ROW EXECUTE PROCEDURE checabaixas()
+/*Olhar slide total salario*/
+/*UPDATE Subtrair o antigo*/
+
+/*pt2) Cada vez que faça uma inserção, MAX(ndivisão) do grupo*/

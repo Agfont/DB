@@ -1,0 +1,31 @@
+1.a)
+
+b)Tabela chefes_militares: "id_lider" int NOT NULL e FOREIGN KEY
+
+c) DELETE e UPDATE-> nao deixa se só tiver 1 chefe
+   
+d) UPDATE -> vejo a divisão do novo chefe que ta 
+	   sendo inserido e não deixo ele inserir se ja tiver
+	   3 chefes
+  INSERT -> nao deixa inserir mais q 3 chefes
+
+e) DELETE e UPDATE -> não deixo o grupo ter menos
+	      de 1 divisão
+
+f) DELETE -> conto os grupos de um conflito usando
+          a data de entrada e  não deixo deletar se há somente
+          2 grupos
+          
+g) na tabela conflito territorial não deixamos deletar se
+   há somente um país.
+
+h1) ao modificar a tabela divisões, no caso do:
+   - INSERT -> somamos o novo valor ao grupo armado corresp.
+   - UPDATE -> somamos o novo valor e 
+               subtraímos o antigo ao grupos armados corresp.
+   - DELETE -> subtraímos o antigo ao grupos armados corresp.
+   
+ h2) para manter a sequencialidade do número das divisões,
+ a gente seleciona o maior index da tabela:
+  - caso seja null: atribuimos o valor 1
+  - se não somamos um ao index
